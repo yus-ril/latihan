@@ -1,1 +1,271 @@
-ini hanya untuk latihana
+perintah -perintah di git
+
+1. git init untuk inisialisasi
+2. git add . untuk menambahkan semua file
+2.1 git add -all
+3. git add readme.md untuk menambahkan file readme.md
+4. ls untuk menampilkan semua file yang ada dalam folder yang kita git
+5. git commit -m "komitan pertama" untuk melakukan commit
+6. git branch -m main z lupa untuk apa
+7. git remote add origin https://github.com/yus-ril/latihan.git
+untuk masuk kerepositori kayaknya ini
+8. git push origin main untuk upload file
+
+selesai
+
+untuk cek perubahan
+9. git status
+9.1 git status --short (menampilkan status lebih sedikit)
+
+untuk cek semua hasil comitan colaborator
+
+10 git log
+
+11. git help commit -help untuk minta tolong
+
+untuk membuat branch baru
+
+12. git branch nama_branch
+
+untuk mengecek branch yang ada
+
+13. git branch
+
+untuk masuk ke branch gunakan
+
+14. git chechout nama_branc
+
+15. git commit --branch
+
+
+untuk menghapus branch
+
+16. git branch -d Nama_branch
+
+
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch acep
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch
+  acep
+* main
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git checkout acep
+Switched to branch 'acep'
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git status
+On branch acep
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git status
+On branch acep
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   latihantante.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git add .
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git commit -m "ini dari branch acep'
+> "
+[acep 522838f] ini dari branch acep'
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git push origin acep
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 313 bytes | 156.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'acep' on GitHub by visiting:
+remote:      https://github.com/yus-ril/latihan/pull/new/acep
+remote:
+To https://github.com/yus-ril/latihan.git
+ * [new branch]      acep -> acep
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git log
+commit 522838fc1c2a85a4de87776cd4dc66f6a29aca92 (HEAD -> acep, origin/acep)
+Author: yus-ril <yusrilusman050101@gmail.com>
+Date:   Wed Jan 5 19:45:31 2022 +0800
+
+    ini dari branch acep'
+
+commit 001bc149b996772ae2457b49bb0fa3211c6cc2f3 (origin/main, main)
+Author: yus-ril <yusrilusman050101@gmail.com>
+Date:   Wed Jan 5 19:32:48 2022 +0800
+
+    latihan saja
+
+commit 1f1fdabd2fcbb075dc7c368cb912f7f9597a98a2
+Author: yus-ril <yusrilusman050101@gmail.com>
+Date:   Wed Jan 5 19:25:19 2022 +0800
+
+    komitan pertama
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git checkout -b emergency-fix
+Switched to a new branch 'emergency-fix'
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (emergency-fix)
+$ git status
+On branch emergency-fix
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (emergency-fix)
+$ git branch
+  acep
+* emergency-fix
+  main
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (emergency-fix)
+$ git checkout main
+Switched to branch 'main'
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git merge emergency-fix
+Updating 001bc14..522838f
+Fast-forward
+ latihantante.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch -d emergency-fix
+Deleted branch emergency-fix (was 522838f).
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git merge acep
+Already up to date.
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch -d acep
+Deleted branch acep (was 522838f).
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch
+* main
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch -b acep
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git branch -b acep
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (main)
+$ git checkout -b acep
+Switched to a new branch 'acep'
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$ git status
+On branch acep
+nothing to commit, working tree clean
+
+LENOVO@LAPTOP-FI2D2TFK MINGW64 /c/semester 3/New folder/grafkom/cape ujian (acep)
+$
